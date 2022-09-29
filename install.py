@@ -106,16 +106,16 @@ if path.isfile('/usr/bin/torghostng') == True:
     uninstall()
 
 if path.isfile('/usr/bin/pacman') == True:
-    INSTALL_PACKAGES = "pacman -S "
+    INSTALL_PACKAGES = "pacman -S -y "
         
 elif path.isfile('/usr/bin/apt') == True:
-    INSTALL_PACKAGES = "apt install "
+    INSTALL_PACKAGES = "apt install -y "
     
 elif path.isfile('/usr/bin/dnf') == True:
-    INSTALL_PACKAGES = "dnf install "
+    INSTALL_PACKAGES = "dnf install -y "
         
 elif path.isfile('/usr/bin/yum') == True:
-    INSTALL_PACKAGES = "yum install "
+    INSTALL_PACKAGES = "yum install -y "
         
 elif path.isfile('/usr/bin/zypper') == True:
     INSTALL_PACKAGES = "zypper install "
