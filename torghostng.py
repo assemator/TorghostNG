@@ -142,7 +142,7 @@ def check_update():
         check_dependencies('curl')
 
         print(language.checking_update, end='', flush=True)
-        version = getoutput('curl -s --max-time 60 https://raw.githubusercontent.com/Zopolis4/TorghostNG/master/torngconf/Version')
+        version = getoutput('curl -s --max-time 60 https://raw.githubusercontent.com/assemator/TorghostNG/master/torngconf/Version')
         sleep(SLEEP_TIME)
         print(language.done)
 
