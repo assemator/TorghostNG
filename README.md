@@ -22,7 +22,7 @@ TorghostNG currently supports:
 
 To install TorghostNG, open your terminal and enter these commands:    
     
-    git clone https://github.com/Zopolis4/TorghostNG
+    git clone https://github.com/assemator/TorghostNG
     cd TorghostNG
     sudo python3 install.py
     torghostng -h
