@@ -35,6 +35,10 @@ AutomapHostsOnResolve 1
 TransPort 9040
 DNSPort 5353
 ControlPort 9051
+ClientOnly 1
+EntryNodes {DE},{DK},{FR},{SE},{NL},{CH},{UK},{RO},{AT}
+ExitNodes {DE},{DK},{FR},{SE},{NL},{CH},{UK},{RO},{AT}
+StrictNodes 1
 RunAsDaemon 1"""
 
 TorrcConfig_exitnode = """VirtualAddrNetwork 10.0.0.0/10
@@ -42,8 +46,11 @@ AutomapHostsOnResolve 1
 TransPort 9040
 DNSPort 5353
 ControlPort 9051
-RunAsDaemon 1
-ExitNodes {%s}"""
+ClientOnly 1
+EntryNodes {DE},{DK},{FR},{SE},{NL},{CH},{UK},{RO},{AT}
+ExitNodes {%s}
+StrictNodes 1
+RunAsDaemon 1"""
 
 iptables_rules = """NON_TOR="192.168.1.0/24 192.168.0.0/24"
 TOR_UID={}
@@ -96,6 +103,6 @@ export socks4_proxy=
 export socks4a_proxy="""
 
 update_commands = """cd ~ && rm -rf TorghostNG
-git clone https://github.com/githacktools/TorghostNG
+git clone https://github.com/assemator/TorghostNG
 cd TorghostNG
 sudo python3 install.py && sudo python3 install.py"""
